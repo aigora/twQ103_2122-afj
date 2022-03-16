@@ -1,11 +1,11 @@
-# [Título del trabajo]
-
-[Descripción breve del proyecto a realizar (2-3 frases).]
+# Escape Room Virtual
+Juego mediante el cual se van superando pruebas o retos con el fin de ganar el tesoro o la salida de la habitación, respectivamente.
 
 ## Integrantes del equipo
 
-[Nombres, apellidos, y usuario GitHub de los integrantes del equipo.]
+Adrián Espinosa Jiménez
+Federico Laorga
+Jorge Rojo
 
 ## Objetivos del trabajo
-
-[Lista de los objetivos que se persiguen con el trabajo propuesto.]
+Realizar un programa operativo que cumpla las funciones y características establecidas.
