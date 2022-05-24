@@ -122,20 +122,217 @@ void sala(int *altr, int *cont1, int *cont2,int *cont){
 			}
 			break;}
 		case 4:{
-			
 		
-		
-			printf("\nEstas en la sala %i.",*(cont1+1));
+		printf("\nEstas en la sala %i.",*(cont1+1));
+		printf("\n En estadística te encuentras ante un ejercicio que va ligado");
+		printf("\n a las cartas españolas y te pide saber si es posible ");
+		printf("\n obtener el un valor que represente la fiabilidad de que te toquen 3 reyes seguidos, ¿que rama lo estudia?");
+			do{
+		printf("\n1)Continuidad.");
+		printf("\n2)Probabilidad.");
+		printf("\n3)Economía.");
+		printf("\n4)Métodos numéricos.");
+			scanf("%d",&i);}while(i<1||i>4);
+			fflush(stdin);
+			if(i==1){
+				printf("\n Das verguenza ajena.");
+				printf("\nOtra vez será.");
+				*cont2++;
+			}
+			else if(i==3){
+				printf("\nCambiate de carrera.");
+				printf("\nEstás más perdido que un pedo en un jacuzzi.");
+				*cont2++;
+				
+			}
+			else if(i==4){
+				printf("\nNo sabes ni diferenciar las asignaturas que tienes, espabila.");
+				*cont2++;
+				
+			}
+			else{
+				printf("\nEnhorabuena, eres de los pocos que no da pena.");
+				printf("\nPasas a la siguiente sala");
+				*cont1++;
+			}
+				
 			break;}
 		case 5:{
 	
+		printf("\nEstas en la sala %i.",*(cont1+1));
+		printf("\nEstas en la cafe y ves a un profesor con mala cara y ganas de vomitar, ¿qué haces?");
+	
+			do{
+				printf("\n1)Pasas de él y te vas con tus amigos.");
+				printf("\n2)Le ayudas a llegar al baño.");
+			
+				
+				scanf("%i",&i);
+					fflush(stdin);
+			}while(i<1||i>2);
+			if(i==1){
+				printf("\nNo sabes la que te viene encima, te dará clase el próximo cuatri.");
+				cont2++;
+			}
 		
-			printf("\nEstas en la sala %i.",*(cont1+1));
+			else{
+				printf("\nTe dará clase el próximo cuatri, tienes una asigantura de free.");
+		        cont2++;
+			}
+			break;}
+		
+		
+		case 6:{
+		
+		printf("\nEstas en la sala %i.",*(cont1+1));
+		printf("\n ¿Que materia estudia la cristalización y filtración?");
+		
+			do{
+		printf("\n1). Teoría de Circuitos");
+		printf("\n2). Operaciones básicas.");
+	
+			scanf("%d",&i);}while(i<1||i>2);
+			fflush(stdin);
+			if(i==1){
+				printf("\n Das asco, fuera de aquí.");
+				*cont2++;
+			}
+		
+			else{
+				printf("\nFelicidades, has abierto un libro.");
+				printf("\nPasas a la siguiente sala");
+				*cont1++;
+			}
+				
+			break;}
+			
+	    case 7: {
+		
+		printf("\nEstas en la sala %i.",*(cont1+1));
+		printf("\n¿Que métodos se emplean en métodos numéricos (entre otros)?");
+	
+			do{
+		printf("\n1) Le chatelier.");
+		printf("\n2) Ión electrón.");
+		printf("\n3) Runge-Kutta.");
+		
+			scanf("%d",&i);}while(i<1||i>4);
+			fflush(stdin);
+			if(i==1){
+				printf("\nEres de ingeniería química o tonto.");
+				*cont2++;
+			}
+			else if(i==2){
+				printf("\nNo sabes ni de que hablas.");
+				*cont2++;
+				
+			}
+		
+			else{
+				printf("\nBueno, se ve que no eres tan inútil como yo pensaba.");
+				printf("\nPasas a la siguiente sala");
+				*cont1++;
+			}
+				
 			break;}
 			
 			
-	}
+		case 8: {
+		
+		printf("\nEstas en la sala %i.",*(cont1+1));
+		printf("\nEl club deportivo ha promocionado un torneo de free para que observar el nivel");
+		printf("\nde la uni y dar espectáculo. Para el mismo, se han apuntado concursantes como Regs,JM...");
+		printf("\n¿Con que concursante irías?");
 	
+			do{
+		printf("\n1) Regs.");
+		printf("\n2) JM.");
+		printf("\n3) Escobar.");
+		
+			scanf("%d",&i);}while(i<1||i>3);
+			fflush(stdin);
+			if(i==1){
+				printf("\nEres bobo, se metieron con el ayudándose de la fauna gallega y nacional.");
+				*cont2++;
+			}
+			else if(i==2){
+				printf("\nTienes cositas pero perdió en la final.");
+				*cont2++;
+				
+			}
+		
+			else{
+				printf("\nSe puso juguetón y se quedó solo.");
+				printf("\nPasas a la siguiente sala");
+				*cont1++;
+			}
+				
+			break;}
+			
+		case 9:{
+		
+		printf("\nEstas en la sala %i.",*(cont1+1));
+		printf("\nEn referencia a la asignatura de medio ambiente");
+		printf("\n¿En que lugar se produce los tratamientos de aguas contaminadas?");
+	
+	
+			do{
+		printf("\n1) Laboratorios.");
+		printf("\n2) Canales.");
+		printf("\n3) EDARS.");
+		
+			scanf("%d",&i);}while(i<1||i>3);
+			fflush(stdin);
+			if(i==1){
+				printf("\nVete a explorar a uno que te hace falta.");
+				*cont2++;
+			}
+			else if(i==2){
+				printf("\nVete al de Isabel II y nos haces un favor.");
+				*cont2++;
+				
+			}
+		
+			else{
+				printf("\nEn efecto, usted sabe.");
+				printf("\nPasas a la siguiente sala");
+				*cont1++;
+			}
+				
+			break;}
+		
+		case 10:{
+	
+		printf("\nEstas en la sala %i.",*(cont1+1));
+		printf("\nEn refencia a Exp.Ing.QuimI, ¿cual es el uso principal de la fenolftaleina?.");
+		
+			do{
+				printf("\n1)Un indicador.");
+				printf("\n2)Una droga empleada en medicina.");
+				printf("\n3)Un regulador de pH.");
+				
+				scanf("%i",&i);
+					fflush(stdin);
+			}while(i<1||i>3);
+			if(i==1){
+				printf("\nUsted es una máquina de matar(pero no llegas al nivel de Regs).");
+				cont1++;
+			}
+			else if(i==2){
+				printf("\nDeja de fumar que vas a acabar en un centro de desintoxicación.");
+				cont2++;
+			}
+			else{
+				printf("\nLo importante es la intención.");
+		        cont2++;
+			}
+			break;}
+			
+			
+			
+		
+		
+		
 	*cont++;
 }while(cont<14);
 } 
