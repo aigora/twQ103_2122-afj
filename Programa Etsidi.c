@@ -759,12 +759,289 @@ void sala(int *altr, int *cont1, int *cont2,int *cont){
 			}
 			break;
 		}	
+		
+		case 27:{
+			resp[15]={};
+			printf("\nEstas en la sala %i.",*(cont1+1));
+		    printf("\nEn referencia a Ampliación de matemáticas, ¿que integrales se emplean para calcular volúmenes?.");
+	    	printf("\nPista, escribelo en MAYUSCULAS y incluy la palabra INTEGRALES al comenzar);
+			fgets(respuesta,100,stdin);
+			fflush(stdin);
+			char resp[15]={"INTEGRALES TRIPLES"};
+			if(strcmp(respuesta,resp)==0){
+				printf("\nEnhorabuena, pasas de sala.");
+			*cont1++;
+			}
+			else{
+			printf("\nTu si que tienes pequeño el volumen cerebral para no sacar esto.");
+			*cont2++;
+			}
+			
+			break;
+		}
+	    
+		case 28:{
+			printf("\nEstas en la sala %i.",*(cont1+1));
+			printf("\nSi llegases tarde a clase y la puerta estuviera cerrada, ¿que harias? ");
 			
 			
 			
+			do{
+				printf("\n1)Sudar e irte a la terraza.");
+				printf("\n2)Meterte con silencio y sin molestar al profesor.");
+				
+				scanf("%i",&i);
+					fflush(stdin);
+			}while(i<1||i>2);
+			if(i==1){
+				printf("\nEres mi padre pero te va a quedar hasta el recreo, ya somos 2.");
+				*cont2++;
+			}
+			else if(i==2){
+				printf("\nAprobaras la carrera, pero no la vida");
+				*cont1++;
+			}
+			
+			
+			break;
+		}	
 		
+		case 29:{
+	
+		printf("\nEstas en la sala %i.",*(cont1+1));
+		printf("\nEn refencia a Exp.Grafica, ¿donde emplearemos autocad en 3D?.");
 		
+			do{
+				printf("\n1)Concepcion Espacial.");
+				printf("\n2)Normalización.");
+				
+				
+				scanf("%i",&i);
+					fflush(stdin);
+			}while(i<1||i>2);
+			if(i==1){
+				printf("\nUsted no hace dibujitos durante las  clases.");
+				*cont1++;
+			}
+			else if(i==2){
+				printf("\nNo sabes ni lo que estas viendo compañero.");
+				*cont2++;
+			}
+			
 		
+			
+		case 30:{
+	
+		printf("\nEstas en la sala %i.",*(cont1+1));
+		printf("\nEn refencia a la Quimica, ¿cómo conocera el valor del pH en una muestra?.");
+		
+			do{
+				printf("\n1)Tabla periodica.");
+				printf("\n2)Acido-Base.");
+				printf("\n3)Polarización.");
+				
+				scanf("%i",&i);
+					fflush(stdin);
+			}while(i<1||i>3);
+			if(i==1){
+				printf("\nUna tabla te hacia yo para estudiar.");
+				*cont2++;
+			}
+			else if(i==2){
+				printf("\nMuy bien tienes algo de cerebro.");
+				*cont1++;
+			}
+			else{
+				printf("\nYa se puede ir yendo.");
+		        *cont2++;
+			}
+			break;}
+			
+	    case 31:{
+	
+		printf("\nEstas en la sala %i.",*(cont1+1));
+		printf("\nEn refencia a Maquinas electricas, ¿cual es la parte en la que se produce movimiento?.");
+		
+			do{
+				printf("\n1)Rotor.");
+				printf("\n2)Estator.");
+			
+				
+				scanf("%i",&i);
+					fflush(stdin);
+			}while(i<1||i>3);
+			if(i==1){
+				printf("\nEra para tontos no se emocione usted mucho.");
+				*cont1++;
+			}
+			else if(i==2){
+				printf("\nDeja la uni ya.");
+				*cont2++;
+			}
+		
+			break;}	
+		
+		case 32:{
+	
+		printf("\nEstas en la sala %i.",*(cont1+1));
+		printf("\nEn refencia a la Algebra, ¿que parte de las matematicas engloba?.");
+		
+			do{
+				printf("\n1)Algebra.");
+				printf("\n2)Vectores.");
+				printf("\n3)Probabilidad.");
+				
+				scanf("%i",&i);
+					fflush(stdin);
+			}while(i<1||i>3);
+			if(i==1){
+				printf("\nAl menos sabes hablar jaja.");
+				*cont1++;
+			}
+			else if(i==2){
+				printf("\nCasi pero no.");
+				*cont2++;
+			}
+			else{
+				printf("\nDespierta amigo.");
+		        *cont2++;
+			}
+			break;}
+			
+		case 33:{
+	
+		printf("\nEstas en la sala %i.",*(cont1+1));
+		printf("\nEn refencia a la biblio, ¿cómo tratará el material?.");
+		
+			do{
+				printf("\n1)Lo quemas.");
+				printf("\n2)Lo cuidas.");
+				printf("\n3)Lo robas.");
+				
+				scanf("%i",&i);
+					fflush(stdin);
+			}while(i<1||i>3);
+			if(i==1){
+				printf("\nEres piromano.");
+				*cont2++;
+			}
+			else if(i==2){
+				printf("\nMuy bien tienes algo de cerebro.");
+				*cont1++;
+			}
+			else{
+				printf("\nEres un jugueton.");
+		        *cont2++;
+			}
+			break;}
+		
+		case 34:{
+	
+		printf("\nEstas en la sala %i.",*(cont1+1));
+		printf("\nEn refencia a los circuitos, ¿que tipos de corriente son los mas empleados?.");
+		
+			do{
+				printf("\n1)Continua y alterna.");
+				printf("\n2)Alterna y Regulable.");
+				printf("\n3)Continua y eléctrica.");
+				
+				scanf("%i",&i);
+					fflush(stdin);
+			}while(i<1||i>3);
+			if(i==1){
+				printf("\nUsted ha ido a clase.");
+				*cont1++;
+			}
+			else if(i==2){
+				printf("\nEres una castaña.");
+				*cont2++;
+			}
+			else{
+				printf("\nTraeme un cafe.");
+		        *cont2++;
+			}
+			break;}
+		
+		case 35:{
+	
+		printf("\nEstas en la sala %i.",*(cont1+1));
+		printf("\nEn refencia a la Economía, ¿cómo conseguirá información válida?.");
+		
+			do{
+				printf("\n1)Improvisando.");
+				printf("\n2)Mediante diapositivas y libros recomendados.");
+				printf("\n3)Fumando.");
+				
+				scanf("%i",&i);
+					fflush(stdin);
+			}while(i<1||i>3);
+			if(i==1){
+				printf("\nImprovisa en tu casa.");
+				*cont2++;
+			}
+			else if(i==2){
+				printf("\nEres responsable al menos.");
+				*cont1++;
+			}
+			else{
+				printf("\nTe fumas los creditos me da a mi.");
+		        *cont2++;
+			}
+			break;}
+			
+		case 36:{
+	
+		printf("\nEstas en la sala %i.",*(cont1+1));
+		printf("\nEn refencia a nivelación de ingles, ¿cómo planteara la asignatura?.");
+		
+			do{
+				printf("\n1)Yendo a clase y practicando a diario.");
+				printf("\n2)No yendo.");
+				printf("\n3)Yendo directo al examen.");
+				
+				scanf("%i",&i);
+					fflush(stdin);
+			}while(i<1||i>3);
+			if(i==1){
+				printf("\nUsted es correcto.");
+				*cont1++;
+			}
+			else if(i==2){
+				printf("\nEres un vago.");
+				*cont2++;
+			}
+			else{
+				printf("\nVas de travieso.");
+		        *cont2++;
+			}
+			break;}
+			
+		case 37:{
+	
+		printf("\nEstas en la sala %i.",*(cont1+1));
+		printf("\nEn refencia a la delegación deportiva , ¿cómo conocera dicha fuente deportiva?.");
+		
+			do{
+				printf("\n1)Pasando de ellos.");
+				printf("\n2)Formando parte del equipo de algun deporte para ganar creditos.");
+				printf("\n3)Escuchandoles y poco mas.");
+				
+				scanf("%i",&i);
+					fflush(stdin);
+			}while(i<1||i>3);
+			if(i==1){
+				printf("\nEres un travieso.");
+				*cont2++;
+			}
+			else if(i==2){
+				printf("\nUsted sabe.");
+				*cont1++;
+			}
+			else{
+				printf("\nHay que ser mejor persona.");
+		        *cont2++;
+			}
+			break;}
 	*cont++;
 }while(cont<14);
 } 
