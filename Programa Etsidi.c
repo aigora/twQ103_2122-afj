@@ -1042,6 +1042,86 @@ void sala(int *altr, int *cont1, int *cont2,int *cont){
 		        *cont2++;
 			}
 			break;}
+		case 38:{
+	
+		printf("\nEstas en la sala %i.",*(cont1+1));
+		printf("\nEn ciencia de materiales, ¿que compuesto es empleado en el diagrama de Fe-C?");
+		
+			do{
+				printf("\n1)Ledeburita.");
+				printf("\n2)Granito.");
+				printf("\n3)Madera.");
+				
+				scanf("%i",&i);
+					fflush(stdin);
+			}while(i<1||i>3);
+			if(i==1){
+				printf("\nTienes cositas.");
+				*cont1++;
+			}
+			else if(i==2){
+				printf("\nVete al parque anda.");
+				*cont2++;
+			}
+			else{
+				printf("\nDe eso estas hecho me da a mi.");
+		        *cont2++;
+			}
+			break;}
+		
+		case 39:{
+	
+		printf("\nEstas en la sala %i.",*(cont1+1));
+		printf("\nEn refencia a Exp.Grafica, ¿Son relevantes el uso de capas?Donde y por que.");
+		
+			do{
+				printf("\n1)Solo en concepcion pues hay que destacar cosas sobre otras.");
+				printf("\n2)En ninguna.");
+				printf("\n3)Principalmente en normalizacion, acorde a las normas establecidas.");
+				
+				scanf("%i",&i);
+					fflush(stdin);
+			}while(i<1||i>3);
+			if(i==1){
+				printf("\nSi a destacar circulos.");
+				*cont2++;
+			}
+			else if(i==2){
+				printf("\nAparta de mi camino.");
+				*cont2++;
+			}
+			else{
+				printf("\nUsted sabe de esto, felicidades.");
+		        *cont1++;
+			}
+			break;}
+		
+		case 40:{
+	
+		printf("\nEstas en la sala %i.",*(cont1+1));
+		printf("\nEn refencia a Teoria de circuitos, ¿que utensilio empleamos entre otros?.");
+		
+			do{
+				printf("\n1)Matraces de diferentes tipos.");
+				printf("\n2)Amperimetro.");
+				printf("\n3)Pipeta.");
+				
+				scanf("%i",&i);
+					fflush(stdin);
+			}while(i<1||i>3);
+			if(i==1){
+				printf("\nSi para meter los cables.");
+				*cont2++;
+			}
+			else if(i==2){
+				printf("\nMuy bien tienes algo de cerebro.");
+				*cont1++;
+			}
+			else{
+				printf("\nDate una vuelta a tomar el aire anda .");
+		        *cont2++;
+			}
+			break;}
 	*cont++;
 }while(cont<14);
 } 
