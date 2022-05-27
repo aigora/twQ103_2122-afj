@@ -4,8 +4,7 @@ En este programa, el jugador deberá elegir la carrera deseada a cursar. Posteri
 ## Integrantes del equipo
 
 Adrián Espinosa Jiménez-
-Federico Laorga-
-Jorge Rojo.
+Federico Laorga.
 
 ## Objetivos del trabajo
 1-Establecer un programa operativo y que funcione sin problema alguno.
