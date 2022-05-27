@@ -1148,4 +1148,5 @@ int aleatorio(int altr2){
 		altr2=(rand()%39)+1;
 		
 	return altr2;
+	
 }
