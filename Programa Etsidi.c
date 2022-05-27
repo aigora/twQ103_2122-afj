@@ -98,12 +98,12 @@ int main(){
 			else{
 				printf("\nEnhorabuena, para todas las que te han quedado el anterior cuatri no eres tan tonto.");
 				printf("\nPasas a la siguiente sala");
-				*partida.cont1++;
+				partida.cont1++;
 			}
 				
 			break;}
 		case 2:{
-			resouesta={""};
+			respuesta[100]=0;
 		printf("\nEstas en la sala %i.",partida.contg+1);
 		printf("\nEntras por primera vez a clase de informatica, te emociona aprendeer a programar ");
 		printf("\n(Eso es porque todavia no has tenido que hacer el trabajo).");
@@ -147,7 +147,7 @@ int main(){
 			}
 			else{
 				printf("\nLa muchacha ha tomado tu no como una falta de respeto y te ha golpeado con el cubo de rubik.");
-				print("\nAdemas el cubo se ha roto y te ha incriminado por romperlo, te han puesto una falta disciplinaria.");
+				printf("\nAdemas el cubo se ha roto y te ha incriminado por romperlo, te han puesto una falta disciplinaria.");
 				partida.cont2++;
 			}
 			break;}
@@ -189,7 +189,7 @@ int main(){
 			break;}
 		case 5:{
 	
-		printf("\nEstas en la sala %i.",partida.contg+1;
+		printf("\nEstas en la sala %i.",partida.contg+1);
 		printf("\nEstas en la cafe y ves a un profesor con mala cara y ganas de vomitar, ¿qué haces?");
 	
 			do{
@@ -212,7 +212,7 @@ int main(){
 			break;}
 		case 6:{
 			i=0;
-		printf("\nEstas en la sala %i.",partida.contg+1;
+		printf("\nEstas en la sala %i.",partida.contg+1);
 		printf("\n ¿Que materia estudia la cristalización y filtración?");
 		
 			do{
@@ -265,7 +265,7 @@ int main(){
 		case 8:{
 				i=0;
 			
-		printf("\nEstas en la sala %i.",partida.contg+1;
+		printf("\nEstas en la sala %i.",partida.contg+1);
 		printf("\nEl club deportivo ha promocionado un torneo de free para que observar el nivel");
 		printf("\nde la uni y dar espectáculo. Para el mismo, se han apuntado concursantes como Regs,JM...");
 		printf("\n¿Con que concursante irías?");
@@ -296,7 +296,7 @@ int main(){
 			break;}
 		case 9:{
 				i=0;
-		printf("\nEstas en la sala %i.",partida.contg+1;
+		printf("\nEstas en la sala %i.",partida.contg+1);
 		printf("\nEn referencia a la asignatura de medio ambiente");
 		printf("\n¿En que lugar se produce los tratamientos de aguas contaminadas?");
 	
@@ -377,14 +377,15 @@ int main(){
 			}
 			else{
 				printf("\nTe la has jugado, podras habertela jugado pero lo cierto es que la sinceridad es la mejor virtud.");
-				print("\nEl profe te lo ha explicado, lo has entendido y al final le has caido bien, te ha inflado la nota por enchufe.");
+				printf("\nEl profe te lo ha explicado, lo has entendido y al final le has caido bien, te ha inflado la nota por enchufe.");
 				partida.cont2++;
 			}
 			
 			break;}
 		case 12:{
 				i=0;
-			printf("\nEstas en la sala %i.",*(cont1+1));
+				int j=0;
+			printf("\nEstas en la sala %i.",partida.contg+1);
 				printf("\nEstas  jugando al mus en la terraza, pero es la primera vez que jugas");
 				printf("\nLlebas tres reyes y un as, pero no sabes si el rey vale 12 o 10 y no sabes que hacer.");
 				printf("\n ¿Cual es la puntucion que vale el rey y cual el el sumatorio de puntos totales?");
@@ -429,13 +430,13 @@ int main(){
 			}
 			else{
 				printf("\nLa fiesta fue bastante cutre, has tenido que vender el peluco que te regalo tu abuela por la comunion.");
-				print("\nAdemas d eno pasartelo bien ibas tan borracho que te robaron la cartera y el tabaco, no sirves ni para salir de fiesta.");
+				printf("\nAdemas d eno pasartelo bien ibas tan borracho que te robaron la cartera y el tabaco, no sirves ni para salir de fiesta.");
 				partida.cont2++;
 			}
 				
 				break;}
 		case 14:{
-				resp[15]={""};
+				resp[15]=0;
 					printf("\nEstas en la sala %i.",partida.contg+1);
 		printf("\nEstas en el primer examen de quimica, no has dormido, ayer saliste de fiesta ");
 		printf("\n y por el unico motivo que sigues vivo es por los 12 monsters que lleavs encima.");
@@ -460,7 +461,7 @@ int main(){
 				printf("\nEstas en la sala %i.",partida.contg+1);
 			printf("\nEs tu primer año en la uni y vas a tener el priner exanen de fisica 1, no vas preocupado porque llevas todos .");
 			printf("\nlos tipos de problemas muuy bien preparados y tev hsa hecho todos los ejerccicios de examenes desde el año 95");
-			printf("\nY mira tu la sorpresa que por primera vez en 26 años caen cuatro puntos de teoria, ¿que haces?")
+			printf("\nY mira tu la sorpresa que por primera vez en 26 años caen cuatro puntos de teoria, ¿que haces?");
 			do{
 				printf("\n1)Sacas el movil y copias, total hay mucha gente haciendolo.");
 				printf("\n2)Ves que los dos problemas los sabes hacer, asi que prescindes de copar, total, solo necesitas un 5.");
@@ -481,7 +482,7 @@ int main(){
 			}
 			else{
 				printf("\nEsta no es una universidad para debiles, si estas estresado, una lloradita  rapida y a seguir.");
-				print("\nAdemas de no haber aprobado, eres un lloron.");
+				printf("\nAdemas de no haber aprobado, eres un lloron.");
 				partida.cont2++;
 			}
 			
@@ -512,7 +513,7 @@ int main(){
 			}
 			else{
 				printf("\nLo cierto es que ese minuto que has invertido en ir al baño es lo correcto, has entrado en clase.");
-				print("\ny ni siquiera la profesora habia empezado a repartir examenes, has sacado un 10.");
+				printf("\ny ni siquiera la profesora habia empezado a repartir examenes, has sacado un 10.");
 				partida.cont1++;
 			}
 			break;
@@ -543,7 +544,7 @@ int main(){
 			}
 			else{
 				printf("\nHas ido muy mal preparado al laboratorio, es acido sulfurico, lo has echado sin proteccion y te has quemado");
-				print("\nla profesora se ha dado cuenta de que no tienes ni idea y te ha suspendido las practicas.");
+				printf("\nla profesora se ha dado cuenta de que no tienes ni idea y te ha suspendido las practicas.");
 				partida.cont2++;
 			}
 			
@@ -561,7 +562,7 @@ int main(){
 			break;
 		}
 		case 18:{
-			resp[15]={""};
+			resp[15]=0;
 			printf("\nEstas en la sala %i.",partida.contg);
 		printf("\nEstas a mitad del examen de estadisca, necesitas un 8 para aprobar y ya llevas  ");
 		printf("\nasegurado un ocho, pero no te acuerdas del nombre del metodo que se usa  para la determinacion de la distribucion normal.");
@@ -581,7 +582,7 @@ int main(){
 			break;
 		}
 		case 19:{
-			resp[15]={""};
+			resp[15]=0;
 			printf("\nEstas en la sala %i.",partida.contg+1);
 		printf("\nEstas con uno de los mejores profesores de la etsidi, asensio, dios de ampliacion de matematicas.");
 		printf("\nSabes que dando clases es muy bueno, pero tambien muy riguroso...");
@@ -601,8 +602,8 @@ int main(){
 			break;
 		}
 		case 20:{
-			resp[15]={""};
-			printf("\nEstas en la sala %i.",partida.contg1+1);
+			resp[15]=0;
+			printf("\nEstas en la sala %i.",partida.contg+1);
 		printf("\nEstas en la terccera practica de experi 1, la verdad, es que no te has mirado el pdf.");
 		printf("\nLa profesora te pregunta cual es el nombre del acido de tipo debil el cual es el principal componente del vinagre.");
 		printf("\nPista, escribelo todo en minusculas, el nombre se parece a aceite:");
@@ -646,7 +647,7 @@ int main(){
 			}
 			else{
 				printf("\nEnhorabuena, no eres tan tonto como parecias, lo cierto es que has respondido bien, no te acostumbres");
-				print("\nla politecnica es un agujero negro de sufrimiento y dolor, solo has tenido suerte, recuerdalo.");
+				printf("\nla politecnica es un agujero negro de sufrimiento y dolor, solo has tenido suerte, recuerdalo.");
 				partida.cont1++;
 			}
 			break;
@@ -677,7 +678,7 @@ int main(){
 			}
 			else{
 				printf("\nCon esta te has venido un poco arriba, has visto que sonaba muy tecnico y te has tirado a la piscina");
-				print("\nmejor atiende algo en clase o como minimo ve que parece que no la practicas mucho.");
+				printf("\nmejor atiende algo en clase o como minimo ve que parece que no la practicas mucho.");
 				partida.cont2++;
 			}
 			break;
@@ -699,7 +700,7 @@ int main(){
 			}while(i<1||i>3);
 			if(i==1){
 				printf("\nEse seria un buen plan de no ser porque eres un vago, llevas un mes y medio de clase y todavia no has ido.");
-				printf("\nAl final has suspendido todos los parciales y te estas planteando dejarte 800 pavos en academias.")
+				printf("\nAl final has suspendido todos los parciales y te estas planteando dejarte 800 pavos en academias.");
 				partida.cont2++;
 			}
 			else if(i==2){
@@ -709,7 +710,7 @@ int main(){
 			}
 			else{
 				printf("\nPese a parecer la opcion mas estupida, lo cierto es que te funciona, te has cansado del mus, pero no eres capaz de dormir mas de ");
-				print("\ntres horas al dia, pero bueno, tampoco va a distar mucho de tu vida laboral, asi que en realidad estas entrenado para el futuro.");
+				printf("\ntres horas al dia, pero bueno, tampoco va a distar mucho de tu vida laboral, asi que en realidad estas entrenado para el futuro.");
 				partida.cont1++;
 			}
 			
@@ -717,7 +718,7 @@ int main(){
 			break;
 		}
 		case 24:{
-			resp[15]={""};
+			resp[15]=0;
 			printf("\nEstas en la sala %i.",partida.contg+1);
 		printf("\nEsta vez es una pregunta facil de termodinamica, literalmente lo unico facil de esta asignatura.");
 		printf("\n¿Serias capaz de decirme el nombre del proceso el cual es totalmente eficaz (e imaginario)?).");
@@ -736,7 +737,7 @@ int main(){
 			break;
 		}
 		case 25:{
-			resp[15]={""};
+			resp[15]=0;
 			printf("\nEstas en la sala %i.",partida.contg+1);
 		printf("\nEstas en la segunda practica de fisica II, la practica del solenoide, ¿sabrias decirme que se produce sobre el segundo solenoide?.");
 		printf("\nPista, escribelo en minusculas, ademas una parte del nombre coincide con una forma de llamar a los coches:");
@@ -770,8 +771,8 @@ int main(){
 					fflush(stdin);
 			}while(i<1||i>3);
 			if(i==1){
-				printf("\Tio, eso es de segundo de bachillerato y sirve para calcular el polinomio que proviene de un binomio elevado a n.");
-				printf("\ncuando hayas estudiado regresa, aqui no sirves.")
+				printf("\nTio, eso es de segundo de bachillerato y sirve para calcular el polinomio que proviene de un binomio elevado a n.");
+				printf("\ncuando hayas estudiado regresa, aqui no sirves.");
 				partida.cont2++;
 			}
 			else if(i==2){
@@ -781,19 +782,19 @@ int main(){
 			}
 			else{
 				printf("\nLiteralmete he juntado varias palabras de calculo y ampli para que sonase a algo cientifico ");
-				print("\nmejorutiliza el ordenador para cosas mas utiles que mirar youtube.");
+				printf("\nmejorutiliza el ordenador para cosas mas utiles que mirar youtube.");
 				partida.cont2++;
 			}
 			break;
 		}	
 		case 27:{
-			resp[15]={""};
+			resp[15]=0;
 			printf("\nEstas en la sala %i.",partida.contg+1);
 		    printf("\nEn referencia a Ampliación de matemáticas, ¿que integrales se emplean para calcular volúmenes?.");
-	    	printf("\nPista, escribelo en MAYUSCULAS y incluy la palabra INTEGRALES al comenzar);
+	    	printf("\nPista, escribelo en MAYUSCULAS y sin escribir INTEGRALES al comenzar");
 			fgets(respuesta,100,stdin);
 			fflush(stdin);
-			char resp[15]={"INTEGRALES TRIPLES"};
+			char resp[15]={"TRIPLES"};
 			if(strcmp(respuesta,resp)==0){
 				printf("\nEnhorabuena, pasas de sala.");
 			partida.cont1++;
