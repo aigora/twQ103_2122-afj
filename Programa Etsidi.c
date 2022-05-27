@@ -1161,6 +1161,7 @@ void menu(int *n){
 		scanf("%i",n);
 		}while(*n<1||*n>3);	
 }
+
 int aleatorio(int altr2){
 	
 	srand(time(NULL));
