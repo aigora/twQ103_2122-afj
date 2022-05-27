@@ -13,6 +13,7 @@ struct usuario{
 	char nombre[20];
 	char apellido[20];
 };
+
 void menu();
 int aleatorio();
 
@@ -25,32 +26,28 @@ int main(){
 	int i=0;
 	char respuesta[100];
 	char resp[15];
-	
+	partida.condin=1;
 	
 	FILE*fichero;
-	int condin;
 		menu(&n);
 		if(n==1){
 		
 			fichero=fopen("fichero.txt","w");
-			
+				if(fichero==NULL){
+					printf("\nHa habido un error en la lectura, reinicie el programa.");
+						return 0;
+				}
 			printf("\nEscribe tu nombre: ");
 				fgets(usuario.nombre,20,stdin);
 					fflush(stdin);
 				printf("\nEscribe tu apellido: ");
 				fgets(usuario.apellido,20,stdin);
 					fflush(stdin);
+				fprintf(fichero,"El nombre del jugador es %s %s",usuario.nombre,usuario.apellido);
+				fclose(fichero);
+				partida.condin=1;
 				
-				while ((fscanf(fichero,"%s" "%s",&usuario.nombre[20],usuario.apellido[20]))!=EOF){
-					partida.condin=1;
-					if(fichero==NULL){
-						printf("\nHa habido un error en la lectura, reinicie el programa.");
-						return 0;
-					}
-					else;
-					partida.condin=1;
-					
-					fclose(fichero);}						
+									
 				}
 		else if(n==2){
 			printf("\nTrabajo humildemente realizado por:");
@@ -1148,7 +1145,28 @@ int main(){
 		}
 		else{return 0;
 		}
-			
+			if(partida.cont1==10){
+			printf("\nEnhorabuena, has conseguido escapar de la UPM con vida, has tenido %i aciertos y %i fallos.",partida.cont1,partida.cont2);
+				
+				fichero=fopen("fichero.txt","w");
+				if(fichero==NULL){
+					printf("\nHa habido un error en la lectura, reinicie el programa.");
+						return 0;
+				}
+				fprintf(fichero,"\nHas pasado por %i salas y has obtenido %i aciertos con %i fallos",partida.contg,partida.cont1,partida.cont2);
+				fclose(fichero);
+				
+			}
+			else if(partida.cont2==3){
+				printf("\nLo sentimos, eres malisimo, mejor metete en inef, para la UPm no sirves, has tenido %i fallos y %i aciertos",partida.cont2,partida.cont1);
+				fichero=fopen("fichero.txt","w");
+				if(fichero==NULL){
+					printf("\nHa habido un error en la lectura, reinicie el programa.");
+						return 0;
+				}
+				fprintf(fichero,"\nHas pasado por %i salas y has obtenido %i aciertos con %i fallos",partida.contg,partida.cont1,partida.cont2);
+				fclose(fichero);
+			}
 		return 0;
 }
 void menu(int *n){
@@ -1161,7 +1179,6 @@ void menu(int *n){
 		scanf("%i",n);
 		}while(*n<1||*n>3);	
 }
-
 int aleatorio(int altr2){
 	
 	srand(time(NULL));
