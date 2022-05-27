@@ -1,41 +1,67 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include<time.h>
 #include<string.h>
-void aleatorio(int *altr);
-void sala(int *altr);
+
+struct partida{
+	int condin;
+	int cont1;
+	int cont2;
+	int contg;
+	int altr;
+};
+struct usuario{
+	char nombre[20];
+	char apellido[20];
+};
+void menu();
+int aleatorio();
+
 int main(){
-	int altr,cont1,cont2,cont;
-	altr=0;
-	cont1=0;
-	cont2=0;
-	cont=0;
-	
-	do{
-	
-	aleatorio(&altr,&cont1,&cont2,&cont);
-	sala(&altr,&cont1,&cont2,&cont);
-}while(cont1<11||cont2<4);
+	int n;
+	int faltr=0;
+	struct partida partida;
+	struct usuario usuario;
+	int altr2;
 	
 	
-
-return 0;
-}
-
-void aleatorio(int *altr){
-	
-	srand(time(NULL));
-		*(altr)=(rand()%4)+1;
-}
-void sala(int *altr, int *cont1, int *cont2,int *cont){
-	int i;
-	i=0; 
-	char respuesta[100];
-
-		do{
+	FILE*fichero;
+	int condin;
+		menu(&n);
+		if(n==1){
 		
-	
-	switch(*altr){
+			fichero=fopen("fichero.txt","w");
+			
+			printf("\nEscribe tu nombre: ");
+				fgets(usuario.nombre,20,stdin);
+					fflush(stdin);
+				printf("\nEscribe tu apellido: ");
+				fgets(usuario.apellido,20,stdin);
+					fflush(stdin);
+				
+				while ((fscanf(fichero,"%s" "%s",&usuario.nombre[20],usuario.apellido[20]))!=EOF){
+					partida.condin=1;
+					if(fichero==NULL){
+						printf("\nHa habido un error en la lectura, reinicie el programa.");
+						return 0;
+					}
+					else;
+					partida.condin=1;
+					
+					fclose(fichero);}						
+				}
+		else if(n==2){
+			printf("\nTrabajo humildemente realizado por:");
+			printf("\nAdrian Espinosa");
+			printf("\nFederico Laorga");
+				return 0;
+		}
+		else if(n==3){
+			return 0;
+		}
+		if(partida.condin==1){
+			altr2=partida.altr;		
+			
+				switch(partida.altr){
 		case 1:{
 		
 		printf("\nEstas en la sala %i.",*(cont1+1));
@@ -180,8 +206,6 @@ void sala(int *altr, int *cont1, int *cont2,int *cont){
 		        cont2++;
 			}
 			break;}
-		
-		
 		case 6:{
 		
 		printf("\nEstas en la sala %i.",*(cont1+1));
@@ -205,9 +229,7 @@ void sala(int *altr, int *cont1, int *cont2,int *cont){
 			}
 				
 			break;}
-			
-	    case 7: {
-		
+	 	case 7:{
 		printf("\nEstas en la sala %i.",*(cont1+1));
 		printf("\n¿Que métodos se emplean en métodos numéricos (entre otros)?");
 	
@@ -235,9 +257,8 @@ void sala(int *altr, int *cont1, int *cont2,int *cont){
 			}
 				
 			break;}
-			
-			
-		case 8: {
+		case 8:{
+	
 		
 		printf("\nEstas en la sala %i.",*(cont1+1));
 		printf("\nEl club deportivo ha promocionado un torneo de free para que observar el nivel");
@@ -268,7 +289,6 @@ void sala(int *altr, int *cont1, int *cont2,int *cont){
 			}
 				
 			break;}
-			
 		case 9:{
 		
 		printf("\nEstas en la sala %i.",*(cont1+1));
@@ -300,8 +320,7 @@ void sala(int *altr, int *cont1, int *cont2,int *cont){
 			}
 				
 			break;}
-		
-		case 10:{
+		case 41:{
 	
 		printf("\nEstas en la sala %i.",*(cont1+1));
 		printf("\nEn refencia a Exp.Ing.QuimI, ¿cual es el uso principal de la fenolftaleina?.");
@@ -327,7 +346,6 @@ void sala(int *altr, int *cont1, int *cont2,int *cont){
 		        cont2++;
 			}
 			break;}
-		
 		case 11:{
 			
 			printf("\nEstas en la sala %i.",*(cont1+1));
@@ -380,7 +398,7 @@ void sala(int *altr, int *cont1, int *cont2,int *cont){
 								*cont2++;
 							}
 			break;}
-			case 13:{
+		case 13:{
 				printf("\nEstas en la sala %i.",*(cont1+1));
 			printf("\nEres medio buenillo en los deportes en general y Regs te propone unirte al torneo mixto de volley.");
 			printf("\nQuieres ganarlo porque te regalan una entrada a la fietsidi y eres pobre por pagar la 6ta matricula de infor ");
@@ -409,9 +427,8 @@ void sala(int *altr, int *cont1, int *cont2,int *cont){
 				*cont2++;
 			}
 				
-				break;
-			}
-			case 14:{
+				break;}
+		case 14:{
 				resp[15]={};
 					printf("\nEstas en la sala %i.",*(cont1+1));
 		printf("\nEstas en el primer examen de quimica, no has dormido, ayer saliste de fiesta ");
@@ -432,7 +449,7 @@ void sala(int *altr, int *cont1, int *cont2,int *cont){
 				
 				break;
 			}
-			case 15:{
+		case 15:{
 				printf("\nEstas en la sala %i.",*(cont1+1));
 			printf("\nEs tu primer año en la uni y vas a tener el priner exanen de fisica 1, no vas preocupado porque llevas todos .");
 			printf("\nlos tipos de problemas muuy bien preparados y tev hsa hecho todos los ejerccicios de examenes desde el año 95");
@@ -464,7 +481,6 @@ void sala(int *altr, int *cont1, int *cont2,int *cont){
 				
 				break;
 			}
-			
 		case 16:{
 			
 				printf("\nEstas en la sala %i.",*(cont1+1));
@@ -759,7 +775,6 @@ void sala(int *altr, int *cont1, int *cont2,int *cont){
 			}
 			break;
 		}	
-		
 		case 27:{
 			resp[15]={};
 			printf("\nEstas en la sala %i.",*(cont1+1));
@@ -779,8 +794,7 @@ void sala(int *altr, int *cont1, int *cont2,int *cont){
 			
 			break;
 		}
-	    
-		case 28:{
+	   	case 28:{
 			printf("\nEstas en la sala %i.",*(cont1+1));
 			printf("\nSi llegases tarde a clase y la puerta estuviera cerrada, ¿que harias? ");
 			
@@ -805,7 +819,6 @@ void sala(int *altr, int *cont1, int *cont2,int *cont){
 			
 			break;
 		}	
-		
 		case 29:{
 	
 		printf("\nEstas en la sala %i.",*(cont1+1));
@@ -827,9 +840,7 @@ void sala(int *altr, int *cont1, int *cont2,int *cont){
 				printf("\nNo sabes ni lo que estas viendo compañero.");
 				*cont2++;
 			}
-			
-		
-			
+			break;}
 		case 30:{
 	
 		printf("\nEstas en la sala %i.",*(cont1+1));
@@ -856,7 +867,6 @@ void sala(int *altr, int *cont1, int *cont2,int *cont){
 		        *cont2++;
 			}
 			break;}
-			
 	    case 31:{
 	
 		printf("\nEstas en la sala %i.",*(cont1+1));
@@ -880,7 +890,6 @@ void sala(int *altr, int *cont1, int *cont2,int *cont){
 			}
 		
 			break;}	
-		
 		case 32:{
 	
 		printf("\nEstas en la sala %i.",*(cont1+1));
@@ -907,7 +916,6 @@ void sala(int *altr, int *cont1, int *cont2,int *cont){
 		        *cont2++;
 			}
 			break;}
-			
 		case 33:{
 	
 		printf("\nEstas en la sala %i.",*(cont1+1));
@@ -934,7 +942,6 @@ void sala(int *altr, int *cont1, int *cont2,int *cont){
 		        *cont2++;
 			}
 			break;}
-		
 		case 34:{
 	
 		printf("\nEstas en la sala %i.",*(cont1+1));
@@ -961,7 +968,6 @@ void sala(int *altr, int *cont1, int *cont2,int *cont){
 		        *cont2++;
 			}
 			break;}
-		
 		case 35:{
 	
 		printf("\nEstas en la sala %i.",*(cont1+1));
@@ -988,7 +994,6 @@ void sala(int *altr, int *cont1, int *cont2,int *cont){
 		        *cont2++;
 			}
 			break;}
-			
 		case 36:{
 	
 		printf("\nEstas en la sala %i.",*(cont1+1));
@@ -1015,7 +1020,6 @@ void sala(int *altr, int *cont1, int *cont2,int *cont){
 		        *cont2++;
 			}
 			break;}
-			
 		case 37:{
 	
 		printf("\nEstas en la sala %i.",*(cont1+1));
@@ -1068,7 +1072,6 @@ void sala(int *altr, int *cont1, int *cont2,int *cont){
 		        *cont2++;
 			}
 			break;}
-		
 		case 39:{
 	
 		printf("\nEstas en la sala %i.",*(cont1+1));
@@ -1095,7 +1098,6 @@ void sala(int *altr, int *cont1, int *cont2,int *cont){
 		        *cont1++;
 			}
 			break;}
-		
 		case 40:{
 	
 		printf("\nEstas en la sala %i.",*(cont1+1));
@@ -1121,7 +1123,29 @@ void sala(int *altr, int *cont1, int *cont2,int *cont){
 				printf("\nDate una vuelta a tomar el aire anda .");
 		        *cont2++;
 			}
-			break;}
-	*cont++;
-}while(cont<14);
-} 
+			break;
+			}
+		}
+		}
+		else{return 0;
+		}
+			
+		return 0;
+}
+void menu(int *n){
+	printf("\n*****Bienvenido a SCAPE FROM UPM*****");
+	printf("\nEscoge una opcion para continuar");
+		do{
+	printf("\n1)Registrarse y empezar");
+	printf("\n2)Ver creditos y cerrar partida");
+	printf("\n3)Salir del juego\n");
+		scanf("%i",n);
+		}while(*n<1||*n>3);	
+}
+int aleatorio(int altr2){
+	
+	srand(time(NULL));
+		altr2=(rand()%39)+1;
+		
+	return altr2;
+}
