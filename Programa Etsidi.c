@@ -561,8 +561,8 @@ int main(){
 			break;
 		}
 		case 18:{
-			resp[15]={};
-			printf("\nEstas en la sala %i.",*(cont1+1));
+			resp[15]={""};
+			printf("\nEstas en la sala %i.",partida.contg);
 		printf("\nEstas a mitad del examen de estadisca, necesitas un 8 para aprobar y ya llevas  ");
 		printf("\nasegurado un ocho, pero no te acuerdas del nombre del metodo que se usa  para la determinacion de la distribucion normal.");
 		printf("\n¿Cual es su  nombre?");
@@ -572,17 +572,17 @@ int main(){
 			char resp[15]={"Gauss"};
 			if(strcmp(respuesta,resp)==0){
 				printf("\nEnhorabuena, pasas de sala.");
-			*cont1++;
+			partida.cont1++;
 			}
 			else{
 			printf("\nLa verdad, es que que te vayas a la recu de estadistica es muy triste, es una maria.");
-			*cont2++;
+			partida.cont2++;
 			}
 			break;
 		}
 		case 19:{
-			resp[15]={};
-			printf("\nEstas en la sala %i.",*(cont1+1));
+			resp[15]={""};
+			printf("\nEstas en la sala %i.",partida.contg+1);
 		printf("\nEstas con uno de los mejores profesores de la etsidi, asensio, dios de ampliacion de matematicas.");
 		printf("\nSabes que dando clases es muy bueno, pero tambien muy riguroso...");
 		printf("\nAsension te pregunta que tipo de funcion utilizaras parahallar el valor de una funcion elevada al numero de euler, ¿cual es tu respuesta?:");
@@ -592,17 +592,17 @@ int main(){
 			char resp[15]={"ln(x)"};
 			if(strcmp(respuesta,resp)==0){
 				printf("\nEnhorabuena, pasas de sala.");
-			*cont1++;
+			partida.cont1++;
 			}
 			else{
 			printf("\nHas cometido uno de los mayores errores de tu vida, decepcionar a asensio :-().");
-			*cont2++;
+			partida.cont2++;
 			}
 			break;
 		}
 		case 20:{
-			resp[15]={};
-			printf("\nEstas en la sala %i.",*(cont1+1));
+			resp[15]={""};
+			printf("\nEstas en la sala %i.",partida.contg1+1);
 		printf("\nEstas en la terccera practica de experi 1, la verdad, es que no te has mirado el pdf.");
 		printf("\nLa profesora te pregunta cual es el nombre del acido de tipo debil el cual es el principal componente del vinagre.");
 		printf("\nPista, escribelo todo en minusculas, el nombre se parece a aceite:");
@@ -612,16 +612,17 @@ int main(){
 			char resp[15]={"acido acetico"};
 			if(strcmp(respuesta,resp)==0){
 				printf("\nEnhorabuena, pasas de sala.");
-			*cont1++;
+			partida.cont1++;
 			}
 			else{
 			printf("\nACIDO ACETICO!!!!Lo saben hasta los chavales de la eso que hacen el experimento de la cascara de huevo...");
-			*cont2++;
+			partida.cont2++;
 			}
 			break;
 		}
 		case 21:{
-			printf("\nEstas en la sala %i.",*(cont1+1));
+					i=0;
+			printf("\nEstas en la sala %i.",partida.contg+1);
 			printf("\nEs el ultimo dia para realizar la entrega de maquinas electricas y solo te falta una pregunta.");
 			printf("\nLa verdad es que no tienes mucha idea, pero siempre hay un tipo de rotor para el generador de .");
 			printf("\ncorriente que es de uso habitual, ademas tiene un nombre gracioso, ¿cual es?");
@@ -636,22 +637,23 @@ int main(){
 			if(i==1){
 				printf("\nEl motor de rotor devanado  es verdad que es aampliamante utilizado, pero es mas habitual usar otros por su elevado coste.");
 				printf("\nLa respuesta no esta del todo mal, pero lo cierto es que no tiene un nombre gracioso.");
-				*cont2++;
+				partida.cont2++;
 			}
 			else if(i==2){
 				printf("\nNo te voy a negar que es el nombre mas gracioso, suena bastante a transformer.");
 				printf("\nComo se nota que no has tocado los apuntes de maquinas.");
-				*cont2++;
+				partida.cont2++;
 			}
 			else{
 				printf("\nEnhorabuena, no eres tan tonto como parecias, lo cierto es que has respondido bien, no te acostumbres");
 				print("\nla politecnica es un agujero negro de sufrimiento y dolor, solo has tenido suerte, recuerdalo.");
-				*cont1++;
+				partida.cont1++;
 			}
 			break;
 		}
 		case 22:{
-			printf("\nEstas en la sala %i.",*(cont1+1));
+					i=0;
+			printf("\nEstas en la sala %i.",partida.contg+1);
 			printf("\nEstas haciendo una practica de resistencia de materiales, es una asignatura facil, pero no te dejan utilizar");
 			printf("\nel glosario de ejermplos de distribucion de cargas con diferentes tipos de empotramientos.");
 			printf("\nAdemas te preguntan que es la flecha de una estructura y no tienes ni idea, ¿que crees que sera?.");
@@ -666,22 +668,23 @@ int main(){
 			}while(i<1||i>3);
 			if(i==1){
 				printf("\nEstas hecho una maquina, sigue asi.");
-				*cont1++;
+				partida.cont2++;
 			}
 			else if(i==2){
 				printf("\nEs cierto que hemos sido un poco perros, solo varia en una cosa, pero por lo general se trbaja en y");
 				printf("\nEsta vez te lo damos por bueno, pero no te acostumbres, recuerda que estas en la UPM.");
-				*cont1++;
+				partida.cont1++;
 			}
 			else{
 				printf("\nCon esta te has venido un poco arriba, has visto que sonaba muy tecnico y te has tirado a la piscina");
 				print("\nmejor atiende algo en clase o como minimo ve que parece que no la practicas mucho.");
-				*cont2++;
+				partida.cont2++;
 			}
 			break;
 		}
-		case 23:{
-			printf("\nEstas en la sala %i.",*(cont1+1));
+		case 23:{	
+					i=0;
+			printf("\nEstas en la sala %i.",partida.contg+1);
 			printf("\nLlevas solo dos semanas del cuatri y vas bastante confiado, estas yendo a la uni");
 			printf("\npero no nos engañemos, la verdad es que te dedicas a jugar al mus, y eso que eres un paquete.");
 			printf("\nCrees que deberias ir a clase y estudiar un  poco mas, ¿que haras para sacar el cuatri?.");
@@ -697,25 +700,25 @@ int main(){
 			if(i==1){
 				printf("\nEse seria un buen plan de no ser porque eres un vago, llevas un mes y medio de clase y todavia no has ido.");
 				printf("\nAl final has suspendido todos los parciales y te estas planteando dejarte 800 pavos en academias.")
-				*cont2++;
+				partida.cont2++;
 			}
 			else if(i==2){
 				printf("\nTe has acostumbrado tanto a jugar al mus y poder fumar en la terraza que no aguantas mas de 30 minutos sin fumar");
 				printf("\nPor ello no eres capaz de dar una clase entera y has suspendido todos lo parciales.");
-				*cont2++;
+				partida.cont2++;
 			}
 			else{
 				printf("\nPese a parecer la opcion mas estupida, lo cierto es que te funciona, te has cansado del mus, pero no eres capaz de dormir mas de ");
 				print("\ntres horas al dia, pero bueno, tampoco va a distar mucho de tu vida laboral, asi que en realidad estas entrenado para el futuro.");
-				*cont1++;
+				partida.cont1++;
 			}
 			
 			
 			break;
 		}
 		case 24:{
-			resp[15]={};
-			printf("\nEstas en la sala %i.",*(cont1+1));
+			resp[15]={""};
+			printf("\nEstas en la sala %i.",partida.contg+1);
 		printf("\nEsta vez es una pregunta facil de termodinamica, literalmente lo unico facil de esta asignatura.");
 		printf("\n¿Serias capaz de decirme el nombre del proceso el cual es totalmente eficaz (e imaginario)?).");
 		printf("\nPista, escribelo todo en minusculas, el proceso transforma todo el trabajo en energia sin perdidas, es el ciclo de ¿?:");
@@ -724,17 +727,17 @@ int main(){
 			char resp[15]={"carnot"};
 			if(strcmp(respuesta,resp)==0){
 				printf("\nNo te voy a dar ni la enhorabuena, era super facil, conformate con los 6 creditos.");
-			*cont1++;
+			partida.cont1++;
 			}
 			else{
 			printf("\nSi no sabaes esto no creo ni que sepas que es un proceso adiabatico, en fin, eres la verguenza de los ingenieros...");
-			*cont2++;
+			partida.cont2++;
 			}
 			break;
 		}
 		case 25:{
-			resp[15]={};
-			printf("\nEstas en la sala %i.",*(cont1+1));
+			resp[15]={""};
+			printf("\nEstas en la sala %i.",partida.contg+1);
 		printf("\nEstas en la segunda practica de fisica II, la practica del solenoide, ¿sabrias decirme que se produce sobre el segundo solenoide?.");
 		printf("\nPista, escribelo en minusculas, ademas una parte del nombre coincide con una forma de llamar a los coches:");
 			fgets(respuesta,100,stdin);
@@ -742,17 +745,18 @@ int main(){
 			char resp[15]={"autoinduccion"};
 			if(strcmp(respuesta,resp)==0){
 				printf("\nEnhorabuena, pasas de sala.");
-			*cont1++;
+			partida.cont1++;
 			}
 			else{
 			printf("\n¿Como es que no sabes responder a esto, como has entrado a la ingenieria?, mejor metete en ADE.");
-			*cont2++;
+			partida.cont2++;
 			}
 			
 			break;
 		}
-		case 26:{
-			printf("\nEstas en la sala %i.",*(cont1+1));
+		case 26:{	
+					i=0;
+			printf("\nEstas en la sala %i.",partida.contg+1);
 			printf("\nAhora va una pregunta facil sobre matodos numericos, pese a ser optativa esperemos que la hayas cursado");
 			printf("\n¿Como se llama el metodo matemático que deriva del terorema de barrow que sirve para calcular la interseccion de una funcion");
 			printf("\nmediante el uso de polinomios?.");
@@ -768,23 +772,23 @@ int main(){
 			if(i==1){
 				printf("\Tio, eso es de segundo de bachillerato y sirve para calcular el polinomio que proviene de un binomio elevado a n.");
 				printf("\ncuando hayas estudiado regresa, aqui no sirves.")
-				*cont2++;
+				partida.cont2++;
 			}
 			else if(i==2){
 				printf("\nEfectivamente, seguramente no lo sepas hacer a mano, pero total con MATLAB puedes hacerlo con casi infinitas iteraciones");
 				printf("\nasi que bien jugado.");
-				*cont1++;
+				partida.cont1++;
 			}
 			else{
 				printf("\nLiteralmete he juntado varias palabras de calculo y ampli para que sonase a algo cientifico ");
 				print("\nmejorutiliza el ordenador para cosas mas utiles que mirar youtube.");
-				*cont2++;
+				partida.cont2++;
 			}
 			break;
 		}	
 		case 27:{
-			resp[15]={};
-			printf("\nEstas en la sala %i.",*(cont1+1));
+			resp[15]={""};
+			printf("\nEstas en la sala %i.",partida.contg+1);
 		    printf("\nEn referencia a Ampliación de matemáticas, ¿que integrales se emplean para calcular volúmenes?.");
 	    	printf("\nPista, escribelo en MAYUSCULAS y incluy la palabra INTEGRALES al comenzar);
 			fgets(respuesta,100,stdin);
@@ -792,17 +796,18 @@ int main(){
 			char resp[15]={"INTEGRALES TRIPLES"};
 			if(strcmp(respuesta,resp)==0){
 				printf("\nEnhorabuena, pasas de sala.");
-			*cont1++;
+			partida.cont1++;
 			}
 			else{
 			printf("\nTu si que tienes pequeño el volumen cerebral para no sacar esto.");
-			*cont2++;
+			partida.cont2++;
 			}
 			
 			break;
 		}
 	   	case 28:{
-			printf("\nEstas en la sala %i.",*(cont1+1));
+	   				i=0;
+			printf("\nEstas en la sala %i.",partida.contg+1);
 			printf("\nSi llegases tarde a clase y la puerta estuviera cerrada, ¿que harias? ");
 			
 			
@@ -816,19 +821,19 @@ int main(){
 			}while(i<1||i>2);
 			if(i==1){
 				printf("\nEres mi padre pero te va a quedar hasta el recreo, ya somos 2.");
-				*cont2++;
+				partida.cont2++;
 			}
 			else if(i==2){
 				printf("\nAprobaras la carrera, pero no la vida");
-				*cont1++;
+				partida.cont1++;
 			}
 			
 			
 			break;
 		}	
 		case 29:{
-	
-		printf("\nEstas en la sala %i.",*(cont1+1));
+					i=0;
+		printf("\nEstas en la sala %i.",partida.contg+1);
 		printf("\nEn refencia a Exp.Grafica, ¿donde emplearemos autocad en 3D?.");
 		
 			do{
@@ -841,16 +846,16 @@ int main(){
 			}while(i<1||i>2);
 			if(i==1){
 				printf("\nUsted no hace dibujitos durante las  clases.");
-				*cont1++;
+				partida.cont1++;
 			}
 			else if(i==2){
 				printf("\nNo sabes ni lo que estas viendo compañero.");
-				*cont2++;
+				partida.cont2++;
 			}
 			break;}
 		case 30:{
-	
-		printf("\nEstas en la sala %i.",*(cont1+1));
+					i=0;
+		printf("\nEstas en la sala %i.",partida.contg+1);
 		printf("\nEn refencia a la Quimica, ¿cómo conocera el valor del pH en una muestra?.");
 		
 			do{
@@ -863,20 +868,20 @@ int main(){
 			}while(i<1||i>3);
 			if(i==1){
 				printf("\nUna tabla te hacia yo para estudiar.");
-				*cont2++;
+				partida.cont2++;
 			}
 			else if(i==2){
 				printf("\nMuy bien tienes algo de cerebro.");
-				*cont1++;
+				partida.cont1++;
 			}
 			else{
 				printf("\nYa se puede ir yendo.");
-		        *cont2++;
+		        partida.cont2++;
 			}
 			break;}
 	    case 31:{
-	
-		printf("\nEstas en la sala %i.",*(cont1+1));
+					i=0;
+		printf("\nEstas en la sala %i.",partida.contg+1);
 		printf("\nEn refencia a Maquinas electricas, ¿cual es la parte en la que se produce movimiento?.");
 		
 			do{
@@ -889,17 +894,17 @@ int main(){
 			}while(i<1||i>3);
 			if(i==1){
 				printf("\nEra para tontos no se emocione usted mucho.");
-				*cont1++;
+				partida.cont1++;
 			}
 			else if(i==2){
 				printf("\nDeja la uni ya.");
-				*cont2++;
+				partida.cont2++;
 			}
 		
 			break;}	
 		case 32:{
-	
-		printf("\nEstas en la sala %i.",*(cont1+1));
+					i=0;
+		printf("\nEstas en la sala %i.",partida.contg+1);
 		printf("\nEn refencia a la Algebra, ¿que parte de las matematicas engloba?.");
 		
 			do{
@@ -912,20 +917,21 @@ int main(){
 			}while(i<1||i>3);
 			if(i==1){
 				printf("\nAl menos sabes hablar jaja.");
-				*cont1++;
+				partida.cont1++;
 			}
 			else if(i==2){
 				printf("\nCasi pero no.");
-				*cont2++;
+				partida.cont2++;
 			}
 			else{
 				printf("\nDespierta amigo.");
-		        *cont2++;
+		        partida.cont2++;
 			}
 			break;}
-		case 33:{
+		case 33:{		
+					i=0;
 	
-		printf("\nEstas en la sala %i.",*(cont1+1));
+		printf("\nEstas en la sala %i.",partida.contg+1);
 		printf("\nEn refencia a la biblio, ¿cómo tratará el material?.");
 		
 			do{
@@ -938,20 +944,20 @@ int main(){
 			}while(i<1||i>3);
 			if(i==1){
 				printf("\nEres piromano.");
-				*cont2++;
+				partida.cont2++;
 			}
 			else if(i==2){
 				printf("\nMuy bien tienes algo de cerebro.");
-				*cont1++;
+				partida.cont1++;
 			}
 			else{
 				printf("\nEres un jugueton.");
-		        *cont2++;
+		        partida.cont2++;
 			}
 			break;}
 		case 34:{
-	
-		printf("\nEstas en la sala %i.",*(cont1+1));
+						i=0;
+		printf("\nEstas en la sala %i.",partida.contg+1);
 		printf("\nEn refencia a los circuitos, ¿que tipos de corriente son los mas empleados?.");
 		
 			do{
@@ -964,20 +970,20 @@ int main(){
 			}while(i<1||i>3);
 			if(i==1){
 				printf("\nUsted ha ido a clase.");
-				*cont1++;
+				partida.cont1++;
 			}
 			else if(i==2){
 				printf("\nEres una castaña.");
-				*cont2++;
+				partida.cont2++;
 			}
 			else{
 				printf("\nTraeme un cafe.");
-		        *cont2++;
+		        partida.cont2++;
 			}
 			break;}
 		case 35:{
-	
-		printf("\nEstas en la sala %i.",*(cont1+1));
+					i=0;
+		printf("\nEstas en la sala %i.",partida.contg+1);
 		printf("\nEn refencia a la Economía, ¿cómo conseguirá información válida?.");
 		
 			do{
@@ -990,20 +996,20 @@ int main(){
 			}while(i<1||i>3);
 			if(i==1){
 				printf("\nImprovisa en tu casa.");
-				*cont2++;
+				partida.cont2++;
 			}
 			else if(i==2){
 				printf("\nEres responsable al menos.");
-				*cont1++;
+				partida.cont1++;
 			}
 			else{
 				printf("\nTe fumas los creditos me da a mi.");
-		        *cont2++;
+		        partida.cont2++;
 			}
 			break;}
 		case 36:{
-	
-		printf("\nEstas en la sala %i.",*(cont1+1));
+					i=0;
+		printf("\nEstas en la sala %i.",partida.contg+1);
 		printf("\nEn refencia a nivelación de ingles, ¿cómo planteara la asignatura?.");
 		
 			do{
@@ -1016,20 +1022,21 @@ int main(){
 			}while(i<1||i>3);
 			if(i==1){
 				printf("\nUsted es correcto.");
-				*cont1++;
+				partida.cont1++;
 			}
 			else if(i==2){
 				printf("\nEres un vago.");
-				*cont2++;
+				partida.cont2++;
 			}
 			else{
 				printf("\nVas de travieso.");
-		        *cont2++;
+		        partida.cont2++;
 			}
 			break;}
-		case 37:{
+		case 37:{	
+					i=0;
 	
-		printf("\nEstas en la sala %i.",*(cont1+1));
+		printf("\nEstas en la sala %i.",partida.contg+1);
 		printf("\nEn refencia a la delegación deportiva , ¿cómo conocera dicha fuente deportiva?.");
 		
 			do{
@@ -1042,20 +1049,21 @@ int main(){
 			}while(i<1||i>3);
 			if(i==1){
 				printf("\nEres un travieso.");
-				*cont2++;
+				partida.cont2++;
 			}
 			else if(i==2){
 				printf("\nUsted sabe.");
-				*cont1++;
+				partida.cont1++;
 			}
 			else{
 				printf("\nHay que ser mejor persona.");
-		        *cont2++;
+		        partida.cont2++;
 			}
 			break;}
-		case 38:{
+		case 38:{	
+					i=0;
 	
-		printf("\nEstas en la sala %i.",*(cont1+1));
+		printf("\nEstas en la sala %i.",partida.contg+1);
 		printf("\nEn ciencia de materiales, ¿que compuesto es empleado en el diagrama de Fe-C?");
 		
 			do{
@@ -1068,20 +1076,21 @@ int main(){
 			}while(i<1||i>3);
 			if(i==1){
 				printf("\nTienes cositas.");
-				*cont1++;
+				partida.cont1++;
 			}
 			else if(i==2){
 				printf("\nVete al parque anda.");
-				*cont2++;
+				partida.cont2++;
 			}
 			else{
 				printf("\nDe eso estas hecho me da a mi.");
-		        *cont2++;
+		        partida.cont2++;
 			}
 			break;}
 		case 39:{
+					i=0;
 	
-		printf("\nEstas en la sala %i.",*(cont1+1));
+		printf("\nEstas en la sala %i.",partida.contg+1);
 		printf("\nEn refencia a Exp.Grafica, ¿Son relevantes el uso de capas?Donde y por que.");
 		
 			do{
@@ -1094,20 +1103,20 @@ int main(){
 			}while(i<1||i>3);
 			if(i==1){
 				printf("\nSi a destacar circulos.");
-				*cont2++;
+				partida.cont2++;
 			}
 			else if(i==2){
 				printf("\nAparta de mi camino.");
-				*cont2++;
+				partida.cont2++;
 			}
 			else{
 				printf("\nUsted sabe de esto, felicidades.");
-		        *cont1++;
+		        partida.cont1++;
 			}
 			break;}
 		case 40:{
-	
-		printf("\nEstas en la sala %i.",*(cont1+1));
+					i=0;
+		printf("\nEstas en la sala %i.",partida.contg+1);
 		printf("\nEn refencia a Teoria de circuitos, ¿que utensilio empleamos entre otros?.");
 		
 			do{
@@ -1120,19 +1129,20 @@ int main(){
 			}while(i<1||i>3);
 			if(i==1){
 				printf("\nSi para meter los cables.");
-				*cont2++;
+				partida.cont2++;
 			}
 			else if(i==2){
 				printf("\nMuy bien tienes algo de cerebro.");
-				*cont1++;
+				partida.cont1++;
 			}
 			else{
 				printf("\nDate una vuelta a tomar el aire anda .");
-		        *cont2++;
+		        partida.cont2++;
 			}
 			break;
 			}
 		}
+		partida.contg++;
 	}while(partida.contg>13||partida.cont1>10||partida.cont2>3);
 		}
 		else{return 0;
@@ -1156,4 +1166,4 @@ int aleatorio(int altr2){
 		altr2=(rand()%41)+1;
 		
 	return altr2;
-}			
+}
