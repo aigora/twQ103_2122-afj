@@ -32,7 +32,7 @@ int main(){
 		menu(&n);
 		if(n==1){
 		
-			fichero=fopen("fichero.txt","w");
+			fichero=fopen("fichero.txt","w+");
 				if(fichero==NULL){
 					printf("\nHa habido un error en la lectura, reinicie el programa.");
 						return 0;
