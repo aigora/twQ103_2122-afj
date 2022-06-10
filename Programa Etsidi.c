@@ -2,6 +2,11 @@
 #include<stdlib.h>
 #include<string.h>
 
+struct valores{
+	int numero;
+	char palabra[100];
+};
+
 struct partida{
 	int condin;
 	int cont1;
@@ -23,20 +28,46 @@ int main(){
 	struct partida partida;
 	struct usuario usuario;
 	int altr2;
-	int i=0;
+	int i = 0;
 	char respuesta[100];
 	char resp[15];
 	partida.condin=1;
+	int n_valores;
+	printf("Antes de jugar define tus expectativas");
+	printf("\nintroduce la cantidad de valores: ");
+	scanf("%d", &n_valores);
+	printf("\n");
+	
+	struct valores valores[n_valores];
+	
+	for( i = 0; i < n_valores; i++){
+		printf("introduce las expectativas de %d: ", i+1);
+		printf("\nnumero: ");
+		scanf("%d", &valores[i].numero);
+		fflush(stdin);
+		printf("palabra: ");
+		gets(valores[i].palabra);
+		printf("\n");
+	}
+	
+	for( i = 0; i < n_valores; i++){
+		printf("\nvalores de %d: ", i+1);
+		printf("\nel numero %d", valores[i].numero);
+		printf("\nla palabra es %s", valores[i].palabra);
+		printf("\n");
+	}
+	printf("\n");
 	
 	FILE*fichero;
 		menu(&n);
 		if(n==1){
 		
-			fichero=fopen("fichero.txt","w+");
+			fichero=fopen("fichero.txt","w");
 				if(fichero==NULL){
 					printf("\nHa habido un error en la lectura, reinicie el programa.");
 						return 0;
 				}
+				fflush(stdin);
 			printf("\nEscribe tu nombre: ");
 				fgets(usuario.nombre,20,stdin);
 					fflush(stdin);
